@@ -2006,7 +2006,7 @@ static int fetch_multiple(struct string_list *list, int max_children,
 
 			strvec_pushv(&cmd.args, argv.v);
 			strvec_push(&cmd.args, name);
-			if (verbosity >= 0 && config->display_format != DISPLAY_FORMAT_PORCELAIN)
+			if (verbosity >= 1 && config->display_format != DISPLAY_FORMAT_PORCELAIN)
 				printf(_("Fetching %s\n"), name);
 			cmd.git_cmd = 1;
 			if (run_command(&cmd)) {
