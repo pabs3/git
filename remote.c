@@ -455,6 +455,8 @@ static int handle_config(const char *key, const char *value,
 		remote->skip_default_update = git_config_bool(key, value);
 	else if (!strcmp(subkey, "skipfetchall"))
 		remote->skip_default_update = git_config_bool(key, value);
+	else if (!strcmp(subkey, "skipfetch"))
+		remote->skip_default_update = git_config_bool(key, value);
 	else if (!strcmp(subkey, "prune"))
 		remote->prune = git_config_bool(key, value);
 	else if (!strcmp(subkey, "prunetags"))
