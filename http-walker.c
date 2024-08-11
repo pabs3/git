@@ -258,10 +258,10 @@ static void process_alternates_response(void *callback_data)
 			if (data[i] == '/') {
 				/*
 				 * This counts
-				 * http://git.host/pub/scm/linux.git/
-				 * -----------here^
+				 * http://git.example.org/repo.git/
+				 * ------------------here^
 				 * so memcpy(dst, base, serverlen) will
-				 * copy up to "...git.host".
+				 * copy up to "...example.org".
 				 */
 				const char *colon_ss = strstr(base,"://");
 				if (colon_ss) {
@@ -281,10 +281,10 @@ static void process_alternates_response(void *callback_data)
 				 * from data than path is dropped from base.
 				 *
 				 * This is not wrong.  The alternate in
-				 *     http://git.host/pub/scm/linux.git/
+				 *     http://git.example.org/repo.git/
 				 * to borrow from
-				 *     http://git.host/pub/scm/linus.git/
-				 * is ../../linus.git/objects/.  You need
+				 *     http://git.example.org/repo.git/
+				 * is ../../repo.git/objects/.  You need
 				 * two ../../ to borrow from your direct
 				 * neighbour.
 				 */

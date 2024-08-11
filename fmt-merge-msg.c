@@ -149,7 +149,7 @@ static int handle_line(char *line, struct merge_parents *merge_parents)
 
 	/*
 	 * At this point, line points at the beginning of comment e.g.
-	 * "branch 'frotz' of git://that/repository.git".
+	 * "branch 'frotz' of git://git.example.org/repository.git".
 	 * Find the repository name and point it with src.
 	 */
 	src = strstr(line, " of ");

@@ -99,8 +99,8 @@ If you do not know which user Apache runs as, you can alternatively do
 a "chmod -R a+w .", inspect the files which are created later on, and
 set the permissions appropriately.
 
-Restart apache2, and check whether http://server/my-new-repo.git gives
-a directory listing. If not, check whether apache started up
+Restart apache2, and check whether http://git.example.org/my-new-repo.git
+gives a directory listing. If not, check whether apache started up
 successfully.
 
 

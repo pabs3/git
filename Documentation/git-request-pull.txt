@@ -54,11 +54,11 @@ the `v1.0` release, and want it to be integrated into the project.
 First you push that change to your public repository for others to
 see:
 
-	git push https://git.ko.xz/project master
+	git push https://git.example.org/project master
 
 Then, you run this command:
 
-	git request-pull v1.0 https://git.ko.xz/project master
+	git request-pull v1.0 https://git.example.org/project master
 
 which will produce a request to the upstream, summarizing the
 changes between the `v1.0` release and your `master`, to pull it
@@ -67,11 +67,11 @@ from your public repository.
 If you pushed your change to a branch whose name is different from
 the one you have locally, e.g.
 
-	git push https://git.ko.xz/project master:for-linus
+	git push https://git.example.org/project master:for-upstream
 
 then you can ask that to be pulled with
 
-	git request-pull v1.0 https://git.ko.xz/project master:for-linus
+	git request-pull v1.0 https://git.example.org/project master:for-upstream
 
 
 GIT

@@ -334,10 +334,10 @@ $ git checkout-index -f -u -a $JC
 
 You do random edits, without running 'git update-index'.  And then
 you notice that the tip of your "upstream" tree has advanced
-since you pulled from him:
+since you pulled from them:
 
 ----------------
-$ git fetch git://.... linus
+$ git fetch git://git.example.org/repo.git repo
 $ LT=`git rev-parse FETCH_HEAD`
 ----------------
 
@@ -349,7 +349,7 @@ then does the right thing.  So with the following sequence:
 ----------------
 $ git read-tree -m -u `git merge-base $JC $LT` $JC $LT
 $ git merge-index git-merge-one-file -a
-$ echo "Merge with Linus" | \
+$ echo "Merge with upstream" | \
   git commit-tree `git write-tree` -p $JC -p $LT
 ----------------
 

@@ -399,7 +399,7 @@ Others might be different.
 Give push/pull only access to developers using git-over-ssh.::
 
 e.g. those using:
-`$ git push/pull ssh://host.xz/pub/scm/project`
+`$ git push/pull ssh://git.example.org/pub/scm/project`
 +
 ------------
 $ grep git /etc/passwd <1>

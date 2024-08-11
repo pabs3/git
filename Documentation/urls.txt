@@ -81,13 +81,13 @@ configuration section of the form:
 For example, with this:
 
 ------------
-	[url "git://git.host.xz/"]
-		insteadOf = host.xz:/path/to/
+	[url "git://git.example.org/"]
+		insteadOf = example.org:/path/to/
 		insteadOf = work:
 ------------
 
-a URL like "work:repo.git" or like "host.xz:/path/to/repo.git" will be
-rewritten in any context that takes a URL to be "git://git.host.xz/repo.git".
+a URL like "work:repo.git" or like "example.org:/path/to/repo.git" will be
+rewritten in any context that takes a URL to be "git://git.example.org/repo.git".
 
 If you want to rewrite URLs for push only, you can create a
 configuration section of the form:

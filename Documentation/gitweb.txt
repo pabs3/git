@@ -422,7 +422,7 @@ ScriptAlias /cgi-bin/ "/var/www/cgi-bin/"
 
 With that configuration the full path to browse repositories would be:
 
-  http://server/cgi-bin/gitweb.cgi
+  http://git.example.org/cgi-bin/gitweb.cgi
 
 Apache with mod_perl, via ModPerl::Registry
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -449,7 +449,7 @@ Alias /perl "/var/www/perl"
 
 With that configuration the full path to browse repositories would be:
 
-  http://server/perl/gitweb.cgi
+  http://git.example.org/perl/gitweb.cgi
 
 Apache with FastCGI
 ~~~~~~~~~~~~~~~~~~~
@@ -470,7 +470,7 @@ Alias /gitweb/static /usr/share/gitweb/static
 
 With that configuration the full path to browse repositories would be:
 
-  http://server/gitweb
+  http://git.example.org/gitweb
 
 
 ADVANCED WEB SERVER SETUP
@@ -502,7 +502,7 @@ repositories, you can configure Apache like this:
 -----------------------------------------------------------------------
 
 The above configuration expects your public repositories to live under
-`/pub/git` and will serve them as `http://git.domain.org/dir-under-pub-git`,
+`/pub/git` and will serve them as `http://git.example.org/dir-under-pub-git`,
 both as clonable Git URL and as browsable gitweb interface.  If you then
 start your linkgit:git-daemon[1] with `--base-path=/pub/git --export-all`
 then you can even use the `git://` URL with exactly the same path.
