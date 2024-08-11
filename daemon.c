@@ -54,8 +54,8 @@ static const char *interpolated_path;
 static int base_path_relaxed;
 
 /* If defined, ~user notation is allowed and the string is inserted
- * after ~user/.  E.g. a request to git://host/~alice/frotz would
- * go to /home/alice/pub_git/frotz with --user-path=pub_git.
+ * after ~user/.  E.g. a request to git://example.org/~alice/frotz
+ * would go to /home/alice/pub_git/frotz with --user-path=pub_git.
  */
 static const char *user_path;
 

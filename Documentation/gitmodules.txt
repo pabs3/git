@@ -115,11 +115,11 @@ Consider the following `.gitmodules` file:
 ----
 [submodule "libfoo"]
 	path = include/foo
-	url = git://foo.com/git/lib.git
+	url = git://example.com/git/libfoo.git
 
 [submodule "libbar"]
 	path = include/bar
-	url = git://bar.com/git/lib.git
+	url = git://example.org/git/libbar.git
 ----
 
 This defines two submodules, `libfoo` and `libbar`. These are expected to

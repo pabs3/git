@@ -1843,7 +1843,7 @@ $ git pull /path/to/other/repository
 or an ssh URL:
 
 -------------------------------------------------
-$ git clone ssh://yourhost/~you/repository
+$ git clone ssh://example.org/~you/repository
 -------------------------------------------------
 
 For projects with few developers, or for synchronizing a few private
@@ -1940,7 +1940,7 @@ Advertise the URL of `proj.git`.  Anybody else should then be able to
 clone or pull from that URL, for example with a command line like:
 
 -------------------------------------------------
-$ git clone http://yourserver.com/~you/proj.git
+$ git clone http://example.com/~you/proj.git
 -------------------------------------------------
 
 (See also
@@ -1962,13 +1962,13 @@ update the remote branch named `master` with the latest state of your
 branch named `master`, run
 
 -------------------------------------------------
-$ git push ssh://yourserver.com/~you/proj.git master:master
+$ git push ssh://example.com/~you/proj.git master:master
 -------------------------------------------------
 
 or just
 
 -------------------------------------------------
-$ git push ssh://yourserver.com/~you/proj.git master
+$ git push ssh://example.com/~you/proj.git master
 -------------------------------------------------
 
 As with `git fetch`, `git push` will complain if this does not result in a
@@ -1986,14 +1986,14 @@ As with `git fetch`, you may also set up configuration options to
 save typing; so, for example:
 
 -------------------------------------------------
-$ git remote add public-repo ssh://yourserver.com/~you/proj.git
+$ git remote add public-repo ssh://example.com/~you/proj.git
 -------------------------------------------------
 
 adds the following to `.git/config`:
 
 -------------------------------------------------
 [remote "public-repo"]
-	url = yourserver.com:proj.git
+	url = example.com:proj.git
 	fetch = +refs/heads/*:refs/remotes/example/*
 -------------------------------------------------
 
@@ -2034,14 +2034,14 @@ You may force `git push` to perform the update anyway by preceding the
 branch name with a plus sign:
 
 -------------------------------------------------
-$ git push ssh://yourserver.com/~you/proj.git +master
+$ git push ssh://example.com/~you/proj.git +master
 -------------------------------------------------
 
 Note the addition of the `+` sign.  Alternatively, you can use the
 `-f` flag to force the remote update, as in:
 
 -------------------------------------------------
-$ git push -f ssh://yourserver.com/~you/proj.git master
+$ git push -f ssh://example.com/~you/proj.git master
 -------------------------------------------------
 
 Normally whenever a branch head in a public repository is modified, it

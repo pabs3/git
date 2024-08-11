@@ -355,20 +355,20 @@ EXAMPLES
 Start development from a known tag::
 +
 ------------
-$ git clone git://git.kernel.org/pub/scm/.../linux-2.6 my2.6
-$ cd my2.6
-$ git branch my2.6.14 v2.6.14   <1>
-$ git switch my2.6.14
+$ git clone git://git.example.org/repo.git repo-v2
+$ cd repo-v2
+$ git branch my-v2 v2   <1>
+$ git switch my-v2
 ------------
 +
 <1> This step and the next one could be combined into a single step with
-    "checkout -b my2.6.14 v2.6.14".
+    "checkout -b my-v2 v2".
 
 Delete an unneeded branch::
 +
 ------------
-$ git clone git://git.kernel.org/.../git.git my.git
-$ cd my.git
+$ git clone git://git.example.org/repo.git repo.git
+$ cd repo.git
 $ git branch -d -r origin/todo origin/html origin/man   <1>
 $ git branch -D test                                    <2>
 ------------

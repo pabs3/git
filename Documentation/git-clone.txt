@@ -356,8 +356,8 @@ EXAMPLES
 * Clone from upstream:
 +
 ------------
-$ git clone git://git.kernel.org/pub/scm/.../linux.git my-linux
-$ cd my-linux
+$ git clone git://git.example.org/repo.git my-repo
+$ cd my-repo
 $ make
 ------------
 
@@ -374,10 +374,10 @@ $ git show-branch
 * Clone from upstream while borrowing from an existing local directory:
 +
 ------------
-$ git clone --reference /git/linux.git \
-	git://git.kernel.org/pub/scm/.../linux.git \
-	my-linux
-$ cd my-linux
+$ git clone --reference /git/repo.git \
+	git://git.example.org/repo.git \
+	my-repo
+$ cd my-repo
 ------------
 
 

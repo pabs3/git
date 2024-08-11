@@ -28,7 +28,7 @@ $VERSION = '0.01';
   git_cmd_try { Git::command_noisy('update-server-info') }
               '%s failed w/ code %d';
 
-  my $repo = Git->repository (Directory => '/srv/git/cogito.git');
+  my $repo = Git->repository (Directory => '/srv/git/repo.git');
 
 
   my @revs = $repo->command('rev-list', '--since=last monday', '--all');
@@ -88,8 +88,8 @@ of your process.)
 
 TODO: In the future, we might also do
 
-	my $remoterepo = $repo->remote_repository (Name => 'cogito', Branch => 'master');
-	$remoterepo ||= Git->remote_repository ('http://git.or.cz/cogito.git/');
+	my $remoterepo = $repo->remote_repository (Name => 'repo', Branch => 'master');
+	$remoterepo ||= Git->remote_repository ('https://git.example.org/repo.git/');
 	my @refs = $remoterepo->refs();
 
 Currently, the module merely wraps calls to external Git tools. In the future,

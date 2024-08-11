@@ -48,7 +48,7 @@ COMMANDS
 	These are optional command-line options for init.  Each of
 	these flags can point to a relative repository path
 	(--tags=project/tags) or a full url
-	(--tags=https://foo.org/project/tags).
+	(--tags=https://example.org/project/tags).
 	You can specify more than one --tags and/or --branches options, in case
 	your Subversion repository places tags or branches under multiple paths.
 	The option --stdlayout is
@@ -71,7 +71,7 @@ COMMANDS
 	For transports that SVN handles authentication for (http,
 	https, and plain svn), specify the username.  For other
 	transports (e.g. `svn+ssh://`), you must include the username in
-	the URL, e.g. `svn+ssh://foo@svn.bar.com/project`
+	the URL, e.g. `svn+ssh://foo@svn.example.org/project`
 --prefix=<prefix>;;
 	This allows one to specify a prefix which is prepended
 	to the names of remotes if trunk/branches/tags are
@@ -1073,7 +1073,7 @@ listed below are allowed:
 
 ------------------------------------------------------------------------
 [svn-remote "project-a"]
-	url = http://server.org/svn
+	url = http://example.org/svn
 	fetch = trunk/project-a:refs/remotes/project-a/trunk
 	branches = branches/*/project-a:refs/remotes/project-a/branches/*
 	branches = branches/release_*:refs/remotes/project-a/branches/release_*
@@ -1103,7 +1103,7 @@ comma-separated list of names within braces. For example:
 
 ------------------------------------------------------------------------
 [svn-remote "huge-project"]
-	url = http://server.org/svn
+	url = http://example.org/svn
 	fetch = trunk/src:refs/remotes/trunk
 	branches = branches/{red,green}/src:refs/remotes/project-a/branches/*
 	tags = tags/{1.0,2.0}/src:refs/remotes/project-a/tags/*
@@ -1113,7 +1113,7 @@ Multiple fetch, branches, and tags keys are supported:
 
 ------------------------------------------------------------------------
 [svn-remote "messy-repo"]
-	url = http://server.org/svn
+	url = http://example.org/svn
 	fetch = trunk/project-a:refs/remotes/project-a/trunk
 	fetch = branches/demos/june-project-a-demo:refs/remotes/project-a/demos/june-demo
 	branches = branches/server/*:refs/remotes/project-a/branches/*

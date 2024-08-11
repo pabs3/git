@@ -331,7 +331,7 @@ command line:
 ------------
 Linus, please pull from
 
-	git://git..../proj.git master
+	git://git.example.org/proj.git master
 
 to get the following updates...
 ------------
@@ -339,7 +339,7 @@ to get the following updates...
 becomes:
 
 ------------
-$ git pull git://git..../proj.git master
+$ git pull git://git.example.org/proj.git master
 ------------
 
 In such a case, you do not want to automatically follow the other

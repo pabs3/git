@@ -2186,18 +2186,18 @@ Data structures:
 
 $remotes = { # returned by read_all_remotes()
 	'svn' => {
-		# svn-remote.svn.url=https://svn.musicpd.org
-		url => 'https://svn.musicpd.org',
-		# svn-remote.svn.fetch=mpd/trunk:trunk
+		# svn-remote.svn.url=https://svn.example.org
+		url => 'https://svn.example.org',
+		# svn-remote.svn.fetch=example/trunk:trunk
 		fetch => {
-			'mpd/trunk' => 'trunk',
+			'example/trunk' => 'trunk',
 		},
-		# svn-remote.svn.tags=mpd/tags/*:tags/*
+		# svn-remote.svn.tags=example/tags/*:tags/*
 		tags => {
 			path => {
-				left => 'mpd/tags',
+				left => 'example/tags',
 				right => '',
-				regex => qr!mpd/tags/([^/]+)$!,
+				regex => qr!example/tags/([^/]+)$!,
 				glob => 'tags/*',
 			},
 			ref => {
@@ -2238,10 +2238,10 @@ diff-index line ($m hash)
 # retval of read_url_paths{,_all}();
 $l_map = {
 	# repository root url
-	'https://svn.musicpd.org' => {
+	'https://svn.example.org' => {
 		# repository path 		# GIT_SVN_ID
-		'mpd/trunk'		=>	'trunk',
-		'mpd/tags/0.11.5'	=>	'tags/0.11.5',
+		'example/trunk'		=>	'trunk',
+		'example/tags/1'	=>	'tags/1',
 	},
 }
 

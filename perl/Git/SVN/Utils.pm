@@ -218,7 +218,7 @@ sub add_path_to_url {
 	return $url if !defined $path or !length $path;
 
 	# Strip trailing and leading slashes so we don't
-	# wind up with http://x.com///path
+	# wind up with http://example.com///path
 	$url  =~ s{/+$}{};
 	$path =~ s{^/+}{};
 

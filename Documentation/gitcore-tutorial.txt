@@ -680,9 +680,9 @@ raw repository contents into the `.git` directory. For example, to
 create your own copy of the Git repository, you'd do the following
 
 ----------------
-$ mkdir my-git
-$ cd my-git
-$ rsync -rL rsync://rsync.kernel.org/pub/scm/git/git.git/ .git
+$ mkdir my-repo
+$ cd my-repo
+$ rsync -rL rsync://rsync.example.org/repo.git/ .git
 ----------------
 
 followed by
@@ -710,8 +710,8 @@ files).
 Again, this can all be simplified with
 
 ----------------
-$ git clone git://git.kernel.org/pub/scm/git/git.git/ my-git
-$ cd my-git
+$ git clone git://git.example.org/repo.git/ my-repo
+$ cd my-repo
 $ git checkout
 ----------------
 
@@ -1012,9 +1012,9 @@ One of the following transports can be used to name the
 repository to download from:
 
 SSH::
-	`remote.machine:/path/to/repo.git/` or
+	`git.example.org:/path/to/repo.git/` or
 +
-`ssh://remote.machine/path/to/repo.git/`
+`ssh://git.example.org/path/to/repo.git/`
 +
 This transport can be used for both uploading and downloading,
 and requires you to have a log-in privilege over `ssh` to the
@@ -1031,14 +1031,14 @@ both ends on the local machine instead of running other end on
 the remote machine via 'ssh'.
 
 Git Native::
-	`git://remote.machine/path/to/repo.git/`
+	`git://git.example.org/path/to/repo.git/`
 +
 This transport was designed for anonymous downloading.  Like SSH
 transport, it finds out the set of objects the downstream side
 lacks and transfers (close to) minimum set of objects.
 
 HTTP(S)::
-	`http://remote.machine/path/to/repo.git/`
+	`http://git.example.org/path/to/repo.git/`
 +
 Downloader from http and https URL
 first obtains the topmost commit object name from the remote site
@@ -1089,20 +1089,20 @@ the remote repository URL in the local repository's config file
 like this:
 
 ------------------------------------------------
-$ git config remote.linus.url https://git.kernel.org/pub/scm/git/git.git/
+$ git config remote.upstream.url https://git.example.org/repo.git/
 ------------------------------------------------
 
-and use the "linus" keyword with 'git pull' instead of the full URL.
+and use the "upstream" keyword with 'git pull' instead of the full URL.
 
 Examples.
 
-. `git pull linus`
-. `git pull linus tag v0.99.1`
+. `git pull upstream`
+. `git pull upstream tag v1`
 
 the above are equivalent to:
 
-. `git pull http://www.kernel.org/pub/scm/git/git.git/ HEAD`
-. `git pull http://www.kernel.org/pub/scm/git/git.git/ tag v0.99.1`
+. `git pull https://git.example.org/repo.git/ HEAD`
+. `git pull https://git.example.org/repo.git/ tag v1`
 
 
 How does the merge work?
